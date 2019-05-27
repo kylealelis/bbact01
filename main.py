@@ -20,18 +20,15 @@ def checkInput(user, pas):
 		return 0, 0  #Username not found
 	searchIndex = 0
 	for x in users:
-		if usercount > 0:
-			if x == user:
-				if pas == passes[searchIndex]:
-					return 1, names[searchIndex] # User found, also returns name of user
-				else:
-					searchIndex += 1
-					continue
+		if x == user:
+			if pas == passes[searchIndex]:
+				return 1, names[searchIndex] # User found, also returns name of user
 			else:
 				searchIndex += 1
 				continue
 		else:
-			return 0, 0
+			searchIndex += 1
+			continue
 
 
 if __name__ == "__main__":
