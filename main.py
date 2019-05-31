@@ -50,12 +50,12 @@ if __name__ == "__main__":
 		checkFlag, name = checkInput (userInput, passInput)
 		if checkFlag == 1:
 			os.system('clear')
-			print ("Successful login. Welcome %s!" % name)
+			print ("Successful login. Welcome",name)
 		elif checkFlag == 2:
 			while checkFlag == 2:
 				passInput = getpass.getpass("Wrong password, please try again: ")
 				checkFlag, name = checkInput (userInput, passInput)
 			os.system('clear')
-			print ("Successful login. Welcome %s!" % name)
+			print ("Successful login. Welcome",name)
 	else:
 		print ("Username does not exist.")
